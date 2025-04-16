@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendom Number</title>
+</head>
+<body>
+    <div class="container-fluied">
+        <div class="row">
+            <center>
+            <h1>Choose a Random Number</h1>
+            <input type="text" id="Number">
+            <button onclick=" return hello()" > enter</button>
+    
+        </center>
+        </div>
+
+    </div>
+    <script src="random.js">
+
+
+
+import React, { useState } from 'react'
+import './Randomcolor.css'
+
+const Randomcolor = () => {
+    const {color,setcolor} = useState('')
+    
+    const randomnumber = (lenght) =>{
+        return Math.floor(Math.random() *lenght);
+    }
+    const randomcolor = ()=>{
+        let hex = [ 0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        let hexcolor='#';
+
+        for (let i =0; i < 6; i++){
+            hexcolor += hex [randomnumber(hex.length)];
+        }
+           console.log(hexcolor);
+          setcolor(hexcolor);
+
+    }
+
+  return (
+    <div className='btnbox' style={{background: col or}} >
+      <h1>{color}</h1>
+      <button className='btn' onClick={randomcolor}>Click Me</button>
+    </div>
+  )
+}
+
+export default Randomcolor
+    </script>
+</body>
+</html>
